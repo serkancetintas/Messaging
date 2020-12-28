@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  db:
+    image: mongo
+  armut.messaging.api:
+    image: ${DOCKER_REGISTRY-}armutmessagingapi
+    build:
+      context: .
+      dockerfile: src/Armut.Messaging.Api/Dockerfile
+  seq:
+    image: datalust/seq 
+     
