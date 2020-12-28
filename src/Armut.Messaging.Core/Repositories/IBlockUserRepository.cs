@@ -1,6 +1,5 @@
 ﻿using Armut.Messaging.Core.Entities;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Armut.Messaging.Core.Repositories

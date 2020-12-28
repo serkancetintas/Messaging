@@ -7,7 +7,6 @@ using Armut.Messaging.Infrastructure.Auth;
 using Armut.Messaging.Infrastructure.Auth.Handlers;
 using Armut.Messaging.Infrastructure.Contexts;
 using Armut.Messaging.Infrastructure.Mongo;
-using Armut.Messaging.Infrastructure.Mongo.Context;
 using Armut.Messaging.Infrastructure.Mongo.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -149,7 +148,6 @@ namespace Armut.Messaging.Api
             services.AddSingleton<IMongoDbSettings>(serviceProvider =>
                             serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
-            services.AddScoped<MessagingContext, MessagingContext>();
             services.AddScoped(typeof(IMongoRepository<,>), typeof(MongoRepository<,>));
         }
 

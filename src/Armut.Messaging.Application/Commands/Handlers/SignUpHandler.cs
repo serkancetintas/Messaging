@@ -1,5 +1,4 @@
 ﻿using Armut.Messaging.Application.Services;
-using System;
 using System.Threading.Tasks;
 
 namespace Armut.Messaging.Application.Commands.Handlers
